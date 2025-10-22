@@ -1,0 +1,39 @@
+{
+  "name": "frontend",
+  "homepage": "https://wgize.github.io/front_gaialand_react",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && npm run copy404",
+    "copy404": "copy dist\\index.html dist\\404.html",
+    "preview": "vite preview",
+    "deploy": "npm run build && gh-pages -d dist",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@chakra-ui/icons": "^2.2.4",
+    "@chakra-ui/react": "^2.10.9",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "framer-motion": "^7.10.3",
+    "next-themes": "^0.4.6",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^6.30.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.36.0",
+    "@types/react": "^19.1.16",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react-swc": "^4.1.0",
+    "eslint": "^9.36.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.22",
+    "gh-pages": "^6.3.0",
+    "globals": "^16.4.0",
+    "vite": "^7.1.7"
+  }
+}
