@@ -1,7 +1,7 @@
 // NewsBanner.jsx
 import { Box, Flex, Text, Button, VStack } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import imajoin from "../../resources/mine1.jpg";
+import imajoin from "../../resources/bannerlosa.jpg";
 const MotionBox = motion(Box);
 
 const JoinBanner = () => {
@@ -26,7 +26,7 @@ const JoinBanner = () => {
       <Box
         position="absolute"
         inset={0}
-        bg="rgba(0, 0, 0, 0.45)"
+        bg="rgba(0, 0, 0, 0.25)"
         backdropFilter="blur(0.5px)"
       />
 
@@ -42,10 +42,10 @@ const JoinBanner = () => {
         <VStack align="start" spacing={3} color="white">
           <Box mr={5}>
             <Text fontSize={{ base: "sm", md: "3xl" }} fontWeight="bold">
-              Here to play Minecraft?
+              Eres nuevo en "Mi Cancha" ?
             </Text>
             <Text fontSize={{ base: "xs", md: "lg" }} opacity={0.9}>
-              Join and start playing on our Minecraft server now!
+              Reserva ya tu losa favorita para ti y tus amigos
             </Text>
           </Box>
         </VStack>

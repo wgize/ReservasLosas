@@ -18,7 +18,7 @@ const Header = (openOverlay) => {
   const { toggleSidebar } = useSidebar();
   // eslint-disable-next-line no-unused-vars
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const { ShopButton, AuthButtons, ConnectButton } = HeaderButtons(openOverlay);
+  const { ShopButton, AuthButtons } = HeaderButtons(openOverlay);
 
   const isDesktop = useBreakpointValue({ base: false, lg: true });
 
@@ -62,7 +62,6 @@ const Header = (openOverlay) => {
           {/* Botones de acción */}
           <HStack spacing={{ base: 2, md: 3 }} flexShrink={0}>
             <Box display={headerVisibility.shop}>{ShopButton}</Box>
-            <Box display={headerVisibility.connect}>{ConnectButton}</Box>
             <HStack spacing={3} display={headerVisibility.auth}>
               {AuthButtons}
             </HStack>
@@ -76,7 +75,6 @@ const Header = (openOverlay) => {
         onClose={onClose}
         ShopButton={ShopButton}
         AuthButtons={AuthButtons}
-        ConnectButton={ConnectButton}
       />
     </>
   );

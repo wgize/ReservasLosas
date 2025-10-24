@@ -1,5 +1,5 @@
 import { Text, Box } from "@chakra-ui/react";
-import logo from "../../../resources/ima.png";
+import logo from "../../../resources/bannermicancha.png";
 export const HeaderLogo = () => (
   <Box
     as="img"

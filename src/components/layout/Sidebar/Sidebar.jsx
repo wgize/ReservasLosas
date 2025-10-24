@@ -1,9 +1,4 @@
-import {
-  VStack,
-  Button,
-  IconButton,
-  Box,
-} from "@chakra-ui/react";
+import { VStack, Button, IconButton, Box } from "@chakra-ui/react";
 import {
   RiHome2Line,
   RiGamepadLine,
@@ -17,7 +12,7 @@ import {
 } from "react-icons/ri";
 import { NAV_ITEMS } from "../../../data/constants";
 import { useSidebar } from "../../../context/SidebarContext";
-import logo from "../../../resources/ima.png";
+import logo from "../../../resources/logomicancha.png";
 import { scrollToSection } from "../../common/ScrollToSection";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 
@@ -31,7 +26,6 @@ const iconMap = {
   RiCustomerService2Line: RiCustomerService2Line,
   RiTeamLine: RiTeamLine,
 };
-
 
 const Sidebar = ({ openOverlay }) => {
   const { toggleSidebar } = useSidebar();
@@ -83,10 +77,23 @@ const Sidebar = ({ openOverlay }) => {
       overflow="hidden"
     >
       {/* Logo superior (sin cambios) */}
-      <Box w="100%" h="140px" bg="gray.100" position="relative" borderTopRadius="lg" overflow="hidden"
+      <Box
+        w="100%"
+        h="140px"
+        bg="gray.100"
+        position="relative"
+        borderTopRadius="lg"
+        overflow="hidden"
         display={{ base: "none", sm: "none", md: "none", lg: "block" }}
       >
-        <Box as="img" src={logo} alt="Logo del servidor" w="100%" h="100%" objectFit="cover" />
+        <Box
+          as="img"
+          src={logo}
+          alt="Logo del servidor"
+          w="100%"
+          h="100%"
+          objectFit="cover"
+        />
         <IconButton
           icon={<RiCloseLine />}
           aria-label="Cerrar sidebar"
@@ -103,7 +110,13 @@ const Sidebar = ({ openOverlay }) => {
       </Box>
 
       {/* Botones de navegación */}
-      <VStack spacing={3} px={2} flex="1" overflowY="auto" pt={{ base: 2, lg: 0 }}>
+      <VStack
+        spacing={3}
+        px={2}
+        flex="1"
+        overflowY="auto"
+        pt={{ base: 2, lg: 0 }}
+      >
         {NAV_ITEMS.map((item) => {
           const IconComponent = iconMap[item.icon];
 
